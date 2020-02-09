@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/components/Header.js";
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/components/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "/Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/components/MyLayout.js";
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/components/MyLayout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4656,9 +4656,9 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga-kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga_kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js!./":
 /*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga-kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga_kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9744,7 +9744,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/pages/index.js";
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -9764,10 +9764,16 @@ var Index = function Index(props) {
       lineNumber: 7
     },
     __self: this
-  }, "Batman TV Shows"), __jsx("ul", {
+  }, "Exercises for beginners"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
+    },
+    __self: this
+  }, "List out the exercises here, pull from API"), console.log(props), __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: this
   }, props.poses.map(function (pose) {
@@ -9775,7 +9781,7 @@ var Index = function Index(props) {
       key: pose.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 17
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -9783,13 +9789,13 @@ var Index = function Index(props) {
       as: "/p/".concat(pose.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 18
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 19
       },
       __self: this
     }, pose.name)));
@@ -9812,10 +9818,10 @@ Index.getInitialProps = function _callee() {
 
         case 5:
           data = _context.sent;
-          console.log("Data fetched. Count: ".concat(data.length));
+          console.log("Yoga Exercises data fetched. Count: ".concat(data.length));
           return _context.abrupt("return", {
-            shows: data.map(function (entry) {
-              return entry.show;
+            poses: data.map(function (entry) {
+              return entry.pose;
             })
           });
 
@@ -9833,12 +9839,12 @@ Index.getInitialProps = function _callee() {
 
 /***/ 1:
 /*!*******************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga-kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js ***!
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga_kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js ***!
   \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga-kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga-kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga_kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga_kickstarter%2Fkickstarter_frontend%2Fpages%2Findex.js!./");
 
 
 /***/ }),

@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/components/Header.js";
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/components/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -186,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "/Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/components/MyLayout.js";
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/components/MyLayout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1902,7 +1902,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/pages/index.js";
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1921,17 +1921,23 @@ const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["
     lineNumber: 7
   },
   __self: undefined
-}, "Batman TV Shows"), __jsx("ul", {
+}, "Exercises for beginners"), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8
+  },
+  __self: undefined
+}, "List out the exercises here, pull from API"), console.log(props), __jsx("ul", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
   },
   __self: undefined
 }, props.poses.map(pose => __jsx("li", {
   key: pose.id,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 17
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -1939,13 +1945,13 @@ const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["
   as: `/p/${pose.id}`,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 18
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 19
   },
   __self: undefined
 }, pose.name))))));
@@ -1953,9 +1959,9 @@ const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["
 Index.getInitialProps = async function () {
   const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:3000/poses');
   const data = await res.json();
-  console.log(`Data fetched. Count: ${data.length}`);
+  console.log(`Yoga Exercises data fetched. Count: ${data.length}`);
   return {
-    shows: data.map(entry => entry.show)
+    poses: data.map(entry => entry.pose)
   };
 };
 
@@ -1970,7 +1976,7 @@ Index.getInitialProps = async function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/shahranirahiman/Projects/yoga-kickstarter/kickstarter_frontend/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
