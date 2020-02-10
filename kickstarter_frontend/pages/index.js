@@ -4,15 +4,15 @@ import fetch from 'isomorphic-unfetch';
 
 const Index = (props) => (
 	<Layout>
-		<h1>Exercises for beginners</h1>
-		<p>List out the exercises here, pull from API</p>
+		<h1>Index page</h1>
 
+		{/* Do I need to call the API here? or can i call in another page  */}
 		{/* Test props output  */}
 		{console.log(props)}
 		{/* This returns {poses: Array(3), url: {…}} */}
 
 		{/* This part here is the problem */}
-		<ul>
+		{/* <ul>
 			{props.poses.map((pose) => (
 				<li key={pose.id}>
 					<Link href="/p/[id]" as={`/p/${pose.id}`}>
@@ -20,7 +20,7 @@ const Index = (props) => (
 					</Link>
 				</li>
 			))}
-		</ul>
+		</ul> */}
 	</Layout>
 );
 

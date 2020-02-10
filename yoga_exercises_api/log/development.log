@@ -2603,3 +2603,596 @@ Processing by PosesController#index as */*
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1183)
 
 
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:13:09 +0800
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosesController#index as */*
+  [1m[36mPose Load (3.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 7.1ms | ActiveRecord: 11.9ms | Allocations: 5623)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:13:13 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1202)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:13:19 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1201)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:13:24 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1201)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:13:24 +0800
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:13:24 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.6ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1183)
+
+
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.8ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 1253)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:13:30 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:13:31 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 09:14:42 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:19:45 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:19:49 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.7ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:19:50 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:22:25 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 09:22:26 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:11:33 +0800
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosesController#index as */*
+  [1m[36mPose Load (3.8ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 12.8ms | ActiveRecord: 19.0ms | Allocations: 5623)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:13:43 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1201)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:13:46 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (1.1ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms | Allocations: 1201)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:14:26 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.4ms | Allocations: 1204)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:14:26 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.6ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:15:24 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:15:36 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:15:39 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1201)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:15:51 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:17:13 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:19:22 +0800
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosesController#index as */*
+  [1m[36mPose Load (1.2ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 23.5ms | ActiveRecord: 8.9ms | Allocations: 5623)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:29:23 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.7ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 1254)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:32:40 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1201)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:35:38 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1201)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:35:48 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.6ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:39:18 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:39:24 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1201)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:40:35 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:41:09 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:41:15 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.2ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:41:20 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:41:25 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:41:27 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:10 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:16 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:21 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:22 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.7ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:29 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:34 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:42:36 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+  [1m[36mPose Load (1.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPose Load (1.7ms)[0m  [1m[34mSELECT "poses".* FROM "poses" WHERE "poses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPose Load (0.8ms)[0m  [1m[34mSELECT "poses".* FROM "poses" WHERE "poses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:44:50 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:44:56 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:45:04 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:45:10 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:45:15 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 12:47:20 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1184)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:47:22 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 12:49:17 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 13:00:08 +0800
+Processing by PosesController#index as HTML
+  [1m[36mPose Load (1.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 1.3ms | Allocations: 1240)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-02-10 13:00:09 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:03:03 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1217)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 13:03:08 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:03:24 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:03:30 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:03:35 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:03:38 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for ::1 at 2020-02-10 13:04:25 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:04:45 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:07:46 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:07:47 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.7ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:07:53 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:07:56 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:08:02 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:08:07 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:08:12 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:09:57 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:10:02 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.7ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.7ms | Allocations: 1186)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:11:18 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.8ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:11:29 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:11:35 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:11:40 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:11:45 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (1.1ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:11:54 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:12:01 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:12:06 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:12:06 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.3ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1203)
+
+
+Started GET "/poses" for 127.0.0.1 at 2020-02-10 13:12:06 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1183)
+
+

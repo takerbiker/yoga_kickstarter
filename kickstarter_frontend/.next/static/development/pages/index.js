@@ -70,10 +70,38 @@ var Header = function Header() {
       lineNumber: 16
     },
     __self: this
-  }, "Yoga Exercises for Beginners")), __jsx("p", {
+  }, "Yoga Exercises for Beginners")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/kickstarterpath",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
+    },
+    __self: this
+  }, __jsx("a", {
+    style: linkStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "Your kickstarter journey")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/afterclassreview",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, __jsx("a", {
+    style: linkStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "After class review. (To delete)")), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
     },
     __self: this
   }, "Above: Part of header"));
@@ -9764,42 +9792,7 @@ var Index = function Index(props) {
       lineNumber: 7
     },
     __self: this
-  }, "Exercises for beginners"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "List out the exercises here, pull from API"), console.log(props), __jsx("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, props.poses.map(function (pose) {
-    return __jsx("li", {
-      key: pose.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      href: "/p/[id]",
-      as: "/p/".concat(pose.id),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
-    }, __jsx("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      },
-      __self: this
-    }, pose.name)));
-  })));
+  }, "Index page"), console.log(props));
 };
 
 Index.getInitialProps = function _callee() {

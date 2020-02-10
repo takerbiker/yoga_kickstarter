@@ -162,10 +162,38 @@ const Header = () => __jsx("div", {
     lineNumber: 16
   },
   __self: undefined
-}, "Yoga Exercises for Beginners")), __jsx("p", {
+}, "Yoga Exercises for Beginners")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/kickstarterpath",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 18
+  },
+  __self: undefined
+}, __jsx("a", {
+  style: linkStyle,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}, "Your kickstarter journey")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/afterclassreview",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21
+  },
+  __self: undefined
+}, __jsx("a", {
+  style: linkStyle,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 22
+  },
+  __self: undefined
+}, "After class review. (To delete)")), __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
   },
   __self: undefined
 }, "Above: Part of header"));
@@ -1921,40 +1949,7 @@ const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["
     lineNumber: 7
   },
   __self: undefined
-}, "Exercises for beginners"), __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}, "List out the exercises here, pull from API"), console.log(props), __jsx("ul", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-}, props.poses.map(pose => __jsx("li", {
-  key: pose.id,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/p/[id]",
-  as: `/p/${pose.id}`,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
-}, __jsx("a", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 19
-  },
-  __self: undefined
-}, pose.name))))));
+}, "Index page"), console.log(props));
 
 Index.getInitialProps = async function () {
   const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:3000/poses');
