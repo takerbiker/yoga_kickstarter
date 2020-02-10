@@ -9,9 +9,6 @@ const Yogaexercises = (props) => (
 		<p>List out the exercises here, pull from API</p>
 		{/* {console.log(typeof props)} */}
 		{console.log(props.poses)}
-		{/* {console.log(poses)} */}
-		{/* This returns {poses: Array(3), url: {…}} */}
-		{/* This part here is the problem */}
 		<ul>
 			{props.poses.map((pose) => (
 				<li key={pose.id}>
