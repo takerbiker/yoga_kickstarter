@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -177,7 +177,7 @@ const Header = () => __jsx("div", {
   },
   __self: undefined
 }, "Your kickstarter journey")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/mindbodyonline",
+  href: "/afterclassreview",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 21
@@ -190,8 +190,8 @@ const Header = () => __jsx("div", {
     lineNumber: 22
   },
   __self: undefined
-}, "Mindbody online API link")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/afterclassreview",
+}, "After class review. (To delete)")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/mindbodyonline",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 24
@@ -204,7 +204,7 @@ const Header = () => __jsx("div", {
     lineNumber: 25
   },
   __self: undefined
-}, "After class review. (To delete)")), __jsx("p", {
+}, "Mindbody online API link")), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 28
@@ -228,9 +228,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/components/MyLayout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // import Head from 'next/head';
+
+ // import NProgress from 'nprogress';
+// Router.onRoutechangeStart = url => {
+// 	console.log(url);
+// 	NProgress.start();
+// }
+// Router.onRouteChangeComplete = () => Nprogress.done();
+// Router.onRouteChangeError = () => NProgress.done();
 
 const layoutStyle = {
   margin: 20,
@@ -238,20 +249,26 @@ const layoutStyle = {
   border: '1px solid #DDD'
 };
 
-const Layout = props => __jsx("div", {
+const Layout = (props, title) => __jsx("div", {
   style: layoutStyle,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 21
   },
   __self: undefined
 }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 26
   },
   __self: undefined
-}), props.children);
+}), props.title, props.children, __jsx("footer", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 30
+  },
+  __self: undefined
+}, "footer (layout component)"));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -1928,6 +1945,35 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./pages/_error.js":
+/*!*************************!*\
+  !*** ./pages/_error.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/_error.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  statusCode
+}) => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  title: "Error!",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 4
+  },
+  __self: undefined
+}, statusCode ? `Could not load your data mate: Status Code ${statusCode}` : `Couldn't get that page`));
+
+/***/ }),
+
 /***/ "./pages/mindbodyonline.js":
 /*!*********************************!*\
   !*** ./pages/mindbodyonline.js ***!
@@ -1937,6 +1983,7 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Mindbodyonline; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
@@ -1944,68 +1991,98 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_error */ "./pages/_error.js");
 var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/mindbodyonline.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+
+
  // import useSWR from 'swr';
 
-const Mindbodyonline = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}, "MBO API"), console.log(props), __jsx("ul", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-})); //Problem 1: THE LINK IS WRONG
-//Problem 2: Need to include the key. CORS issue.
-// Mindbodyonline.getInitialProps = async function() {
-// 	const res = await fetch('https://api.mindbodyonline.com/public/v6/class/classschedules?');
+class Mindbodyonline extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  // To fetch 
+  static async getInitialProps() {
+    const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('https://api.mindbodyonline.com/public/v6/class/classschedules?limit=100&offset=0', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'API-Key': 'f50b5ea43c1440b5af21be52f91ff903',
+        SiteId: '-99',
+        Authorization: '35fbccfe944c4d3fa97fe1fa31c9432120d41f87f46a4b62bab73c68b7a0b94d',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+    const statusCode = res.status > 200 ? res.status : false;
+    const data = await res.json();
+    console.log(`Class schedule fetched.`);
+    return {
+      schedule: data,
+      statusCode
+    };
+  }
+
+  render() {
+    const {
+      schedule,
+      statusCode
+    } = this.props;
+
+    if (statusCode) {
+      return __jsx(_error__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        statusCode: statusCode,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      });
+    }
+
+    return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: "Mindbody Online",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, "MBO API"), console.log(schedule), __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }));
+  }
+
+} // Mindbodyonline.getInitialProps = async function() {
+// 	const res = await fetch('https://api.mindbodyonline.com/public/v6/class/classschedules?limit=100&offset=0', {
+// 		method  : 'GET',
+// 		headers : {
+// 			'Content-Type'                : 'application/json',
+// 			'API-Key'                     : 'f50b5ea43c1440b5af21be52f91ff903',
+// 			SiteId                        : '-99',
+// 			Authorization                 : '35fbccfe944c4d3fa97fe1fa31c9432120d41f87f46a4b62bab73c68b7a0b94d',
+// 			'Access-Control-Allow-Origin' : '*'
+// 		}
+// 	});
 // 	const data = await res.json();
-// 	console.log(`Class schedule data fetched.`);
+// 	console.log(`MBO DATA FETCHED SUCCESFULLY.`);
 // 	return {
 // 		schedule : data
 // 	};
 // };
 
-
-Mindbodyonline.getInitialProps = async function (url, data) {
-  return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('https://api.mindbodyonline.com/public/v6/class/classschedules?', {
-    method: 'GET',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json',
-      'API-Key': 'f50b5ea43c1440b5af21be52f91ff903',
-      SiteId: '-99',
-      Authorization: 'null',
-      'Access-Control-Allow-Origin': '*'
-    }
-  }).then(response => response.json);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Mindbodyonline); // method: 'Get',
-// headers: {
-//     'Content-Type: application/json',
-//     'API-Key: f50b5ea43c1440b5af21be52f91ff903',
-//     'SiteId': '-99'
-//     'Authorization': 'null',
-// }
-
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!***************************************!*\
   !*** multi ./pages/mindbodyonline.js ***!
   \***************************************/
@@ -2080,6 +2157,17 @@ module.exports = require("core-js/library/fn/weak-map");
 /***/ (function(module, exports) {
 
 module.exports = require("isomorphic-unfetch");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 

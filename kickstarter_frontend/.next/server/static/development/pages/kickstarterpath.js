@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -177,7 +177,7 @@ const Header = () => __jsx("div", {
   },
   __self: undefined
 }, "Your kickstarter journey")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/mindbodyonline",
+  href: "/afterclassreview",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 21
@@ -190,8 +190,8 @@ const Header = () => __jsx("div", {
     lineNumber: 22
   },
   __self: undefined
-}, "Mindbody online API link")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/afterclassreview",
+}, "After class review. (To delete)")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/mindbodyonline",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 24
@@ -204,7 +204,7 @@ const Header = () => __jsx("div", {
     lineNumber: 25
   },
   __self: undefined
-}, "After class review. (To delete)")), __jsx("p", {
+}, "Mindbody online API link")), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 28
@@ -228,9 +228,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/components/MyLayout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // import Head from 'next/head';
+
+ // import NProgress from 'nprogress';
+// Router.onRoutechangeStart = url => {
+// 	console.log(url);
+// 	NProgress.start();
+// }
+// Router.onRouteChangeComplete = () => Nprogress.done();
+// Router.onRouteChangeError = () => NProgress.done();
 
 const layoutStyle = {
   margin: 20,
@@ -238,20 +249,26 @@ const layoutStyle = {
   border: '1px solid #DDD'
 };
 
-const Layout = props => __jsx("div", {
+const Layout = (props, title) => __jsx("div", {
   style: layoutStyle,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 21
   },
   __self: undefined
 }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 26
   },
   __self: undefined
-}), props.children);
+}), props.title, props.children, __jsx("footer", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 30
+  },
+  __self: undefined
+}, "footer (layout component)"));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -1928,6 +1945,154 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./pages/PrivateClass.js":
+/*!*******************************!*\
+  !*** ./pages/PrivateClass.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PrivateClass; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/PrivateClass.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+class PrivateClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  // constructor(props) {
+  // 	super(props);
+  // }
+  // this.state = {
+  // 	class: []
+  // }
+  render() {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, __jsx("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "Features of this page"), __jsx("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, "Hello there"));
+  }
+
+} // const PrivateClass = (props) => (
+// 	<li>
+// 		<Link href={`/privateclass?title=${props.title}`}>
+// 			<a>{props.title}</a>
+// 		</Link>
+// 	</li>
+// );
+
+/***/ }),
+
+/***/ "./pages/PublicClass.js":
+/*!******************************!*\
+  !*** ./pages/PublicClass.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/PublicClass.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Content = () => {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, router.query.title), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "Features of this page"), __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "Feature 1: Book your class (link to MBO)"), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, "Feature 2: Review lesson feature. What exercises do you remember during the class?"), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, "Feature 3: Comments")));
+};
+
+const Page = () => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 22
+  },
+  __self: undefined
+}, __jsx(Content, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 23
+  },
+  __self: undefined
+}));
+
+/* harmony default export */ __webpack_exports__["default"] = (Page);
+
+/***/ }),
+
 /***/ "./pages/kickstarterpath.js":
 /*!**********************************!*\
   !*** ./pages/kickstarterpath.js ***!
@@ -1937,140 +2102,59 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Kickstarterpath; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _PrivateClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PrivateClass */ "./pages/PrivateClass.js");
+/* harmony import */ var _PublicClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PublicClass */ "./pages/PublicClass.js");
 var _jsxFileName = "/Users/shahranirahiman/Projects/yoga_kickstarter/kickstarter_frontend/pages/kickstarterpath.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // import Header from '../components/Header';
 
+ // import PrivateClass from '../components/PrivateClass';
 
 
-const PrivateClass = props => __jsx("li", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: `/privateclass?title=${props.title}`,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, __jsx("a", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}, props.title)));
 
-const PublicClass = props => __jsx("li", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: `/publicclass?title=${props.title}`,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-}, __jsx("a", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 16
-  },
-  __self: undefined
-}, props.title)));
 
-const Kickstarterpath = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 22
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 23
-  },
-  __self: undefined
-}, "Your Kickstarter pathway"), __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 24
-  },
-  __self: undefined
-}, "Page to display after logged in"), __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 25
-  },
-  __self: undefined
-}, "Hi user, welcome to your...."), __jsx(PrivateClass, {
-  title: "Initial Private Class",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 27
-  },
-  __self: undefined
-}), __jsx(PublicClass, {
-  title: "Public Class 1",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 28
-  },
-  __self: undefined
-}), __jsx(PublicClass, {
-  title: "Public Class 2",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 29
-  },
-  __self: undefined
-}), __jsx(PublicClass, {
-  title: "Public Class 3",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 30
-  },
-  __self: undefined
-}), __jsx(PublicClass, {
-  title: "Public Class 4",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 31
-  },
-  __self: undefined
-}), __jsx(PublicClass, {
-  title: "Public Class 5",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 32
-  },
-  __self: undefined
-}), __jsx(PrivateClass, {
-  title: "Final Private Class",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 33
-  },
-  __self: undefined
-}));
+class Kickstarterpath extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: "Kickstarter Profile",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, "Your Kickstarter pathway"), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "Page to display after logged in"), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "Hi user, welcome to your...."));
+  }
 
-/* harmony default export */ __webpack_exports__["default"] = (Kickstarterpath);
+}
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /*!****************************************!*\
   !*** multi ./pages/kickstarterpath.js ***!
   \****************************************/
@@ -2134,6 +2218,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 

@@ -18,11 +18,11 @@ const Header = () => (
 		<Link href="/kickstarterpath">
 			<a style={linkStyle}>Your kickstarter journey</a>
 		</Link>
-		<Link href="/mindbodyonline">
-			<a style={linkStyle}>Mindbody online API link</a>
-		</Link>
 		<Link href="/afterclassreview">
 			<a style={linkStyle}>After class review. (To delete)</a>
+		</Link>
+		<Link href="/mindbodyonline">
+			<a style={linkStyle}>Mindbody online API link</a>
 		</Link>
 
 		<p>Above: Part of header</p>
