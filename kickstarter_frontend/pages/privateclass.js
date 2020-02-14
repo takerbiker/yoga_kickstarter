@@ -15,18 +15,34 @@ export default class PrivateClass extends React.Component {
 
 	render() {
 		return (
-			<React.Fragment>
+			<Layout title="Private Class">
+
 				{/* <h1>{router.query.title}</h1> */}
 				<h1>Features of this page</h1>
-				<h2>Hello there</h2>
-			</React.Fragment>
+				<ul>
+					<li>Book MBO</li>
+					<li>User's own notes</li>
+				</ul>			
+				<Link href='/'>
+					<button className="class-box">Book MBO (Haven't linked)</button>
+				</Link>
+				<br />
+				<Link href='/'>
+					<button className="class-box">User's own comments</button>
+				</Link>
+
+
+				<style jsx global>{`
+					.class-box {
+						width: 300px;
+						height: 100px;
+						border: 1px solid orange;
+						background-color: lightyellow;
+						font-size: 18px;
+					}
+					`}
+				</style>
+			</Layout>
 		);
 	}
 }
-// const PrivateClass = (props) => (
-// 	<li>
-// 		<Link href={`/privateclass?title=${props.title}`}>
-// 			<a>{props.title}</a>
-// 		</Link>
-// 	</li>
-// );

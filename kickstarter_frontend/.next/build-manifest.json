@@ -17,15 +17,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/kickstarterpath": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/mindbodyonline": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/yogaexercises": [
+    "/afterclassreview": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

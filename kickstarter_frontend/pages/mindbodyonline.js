@@ -8,6 +8,14 @@ import { Component } from 'react';
 // import useSWR from 'swr';
 
 export default class Mindbodyonline extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			schedule: ''
+		}
+		
+	}
+
 
 	// To fetch 
 	static async getInitialProps() {
