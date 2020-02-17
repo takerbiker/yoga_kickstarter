@@ -2,10 +2,10 @@
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
 
-import fetch from 'isomorphic-unfetch'; // For fetch API 
+import fetch from 'isomorphic-unfetch'; // For fetch API
 import Error from './_error';
 import { Component } from 'react';
-
+import Head from 'next/head';
 
 export default class Yogaexercises extends Component {
 	// state = {
@@ -16,26 +16,31 @@ export default class Yogaexercises extends Component {
 		const statusCode = res.status > 200 ? res.status : false;
 		const data = await res.json();
 		console.log(`Yoga exercises data fetched. Count: ${data.length}`);
-	
+
 		return {
 			// poses : data.map((entry) => entry.pose)
-			poses : data, statusCode
+			poses      : data,
+			statusCode
 		};
-	};
-
-
-
-
-
+	}
 
 	render() {
 		const { poses, statusCode } = this.props;
 
 		if (statusCode) {
-			return <Error statusCode={statusCode} />
+			return <Error statusCode={statusCode} />;
 		}
-		return ( 
+		return (
 			<Layout title="Yoga Exercises">
+				<Head>
+					<title>Your Yoga Journey</title>
+					<link
+						rel="stylesheet"
+						href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+						integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+						crossorigin="anonymous"
+					/>
+				</Head>
 				<h1>Exercises for beginners</h1>
 				<p>List out the exercises here, pull from API</p>
 
@@ -44,18 +49,49 @@ export default class Yogaexercises extends Component {
 				<ul>
 					{poses.map((pose) => (
 						<li key={pose.id}>
-							<Link href="/p/[id]" as={`/p/${pose.id}`}>
-								<a>{pose.name}</a>
-							</Link>
-							<p>{pose.category}</p>
+							<div className="card">
+								<img src={pose.image} className="card-img-top" alt="..." />
+								<div className="card-body">
+									<p className="card-text">
+										<Link href="/p/[id]" as={`/p/${pose.id}`}>
+											<a>{pose.name}</a>
+										</Link>
+									</p>
+									<p>{pose.category}</p>
+								</div>
+							</div>
 						</li>
 					))}
 				</ul>
+				{/* <div className="card">
+					<img
+						src="https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg"
+						className="card-img-top"
+						alt="..."
+					/>
+					<div className="card-body">
+						<p className="card-text">
+							Some quick example text to build on the card title and make up the bulk of the card's
+							content.
+						</p>
+					</div>
+				</div> */}
+
+				<style jsx>{`
+					.card {
+						width: 18rem;
+						border: orange solid 1px;
+					}
+
+					img {
+						width: 12rem;
+					}
+
+					li {
+						list-style-type: none;
+					}
+				`}</style>
 			</Layout>
-		)
+		);
 	}
 }
-
-
-
-

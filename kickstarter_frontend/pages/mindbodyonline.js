@@ -11,75 +11,77 @@ export default class Mindbodyonline extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			schedule: ''
-		}
-		
+			schedule : ''
+		};
 	}
 
-
-	// To fetch 
+	// To fetch
 	static async getInitialProps() {
-		const res = await fetch('https://api.mindbodyonline.com/public/v6/class/classschedules?limit=100&offset=0', {
-			method  : 'GET',
-			headers : {
-				'Content-Type'                : 'application/json',
-				'API-Key'                     : 'f50b5ea43c1440b5af21be52f91ff903',
-				SiteId                        : '-99',
-				Authorization                 : '35fbccfe944c4d3fa97fe1fa31c9432120d41f87f46a4b62bab73c68b7a0b94d',
-				'Access-Control-Allow-Origin' : '*'
-			}
-		})
+		const res = await fetch('http://localhost:3000/classes');
 		const statusCode = res.status > 200 ? res.status : false;
 		const data = await res.json();
-		console.log(`Class schedule fetched.`);
+		console.log(`Class schedule fetch.`);
 
 		return {
-			schedule : data, 
+			schedule   : data,
 			statusCode
-		}
-	
+		};
 	}
 
 	render() {
 		const { schedule, statusCode } = this.props;
 
 		if (statusCode) {
-			return <Error statusCode={statusCode} />
+			return <Error statusCode={statusCode} />;
 		}
 
 		return (
-			<Layout title="Mindbody Online">
-			<p>MBO API</p>
-			{console.log(schedule)}
+			<Layout title="">
+				<p>MBO API</p>
+				{/* {console.log(schedule)} */}
+				{console.log(schedule.Classes)}
 
-			<ul>{/* {schedule.map((class) => (
-						<p>{schedule}</p>
+				{schedule.Classes.map((x) => (
+					<li key={x.ClassScheduleId}>
+						<p>Studio: {x.Location.Name}</p>
+						{/* <p>Studio: {x.Resource[Name]}</p> */}
+						<p>Class Description: {x.ClassDescription.Description}</p>
+						<p>Start-date: {x.StartDateTime}</p>
+						<p>End date: {x.EndDateTime}</p>
+						<p>Availability: {x.IsAvailable}</p>
+					</li>
+				))}
+
+				{/* {console.log(schedule[1].ClassDescription)} */}
+				<p> Conditionals</p>
+				<ul>
+					<li>If active is true, display.</li>
+					<li>Display only when level is 1/2, show vacancy?</li>
+				</ul>
+				{/* <Link href="https://clients.mindbodyonline.com/LoginLaunch?studioid=590475"> */}
+				<a>Class A</a>
+				{/* </Link> */}
+				<br />
+
+				{/* <Link href="https://clients.mindbodyonline.com/LoginLaunch?studioid=590475"> */}
+				<a>Class B</a>
+				{/* </Link> */}
+
+				{/* <p>{schedule.ClassDescription}</p> */}
+				{/* <p>{schedule.ClassDescription}</p> */}
+				{/* {schedule.ClassDescription.map((class) => (
+					{class.Name}
 				))} */}
-			</ul>
-	</Layout>
-		)
+			</Layout>
+		);
 	}
 }
 
-
-
-// Mindbodyonline.getInitialProps = async function() {
-// 	const res = await fetch('https://api.mindbodyonline.com/public/v6/class/classschedules?limit=100&offset=0', {
-// 		method  : 'GET',
-// 		headers : {
-// 			'Content-Type'                : 'application/json',
-// 			'API-Key'                     : 'f50b5ea43c1440b5af21be52f91ff903',
-// 			SiteId                        : '-99',
-// 			Authorization                 : '35fbccfe944c4d3fa97fe1fa31c9432120d41f87f46a4b62bab73c68b7a0b94d',
-// 			'Access-Control-Allow-Origin' : '*'
-// 		}
-// 	});
-// 	const data = await res.json();
-// 	console.log(`MBO DATA FETCHED SUCCESFULLY.`);
-
-// 	return {
-// 		schedule : data
-// 	};
-// };
-
-
+// {poses.map((pose) => (
+// 	<li key={pose.id}>
+// 		<Link href="/p/[id]" as={`/p/${pose.id}`}>
+// 			<a>{pose.name}</a>
+// 		</Link>
+// 		<p>{pose.category}</p>
+// 	</li>
+// ))

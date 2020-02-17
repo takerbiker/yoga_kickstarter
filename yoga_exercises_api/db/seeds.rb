@@ -5,10 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Pose.create([
-    {name: "Cobra Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1720/MTQ3MTU3MjczOTUxNjEwMzE4/3yp_287_6710_gn_bjk.webp" , category: "Shoulder, Back"},
-    {name: "Cat Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1720/MTQ3MTc0NjYxMzIxNDAxODA2/2hp_286_0574_bjk.webp" , category: "Spine"},
-    {name: "Cobra Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1720/MTQ3MTU3MjczOTUxNjEwMzE4/3yp_287_6710_gn_bjk.webp" , category: "Shoulder, Upper torso"}
+
+# Pose.create([
+#     {name: "Cobra Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1720/MTQ3MTU3MjczOTUxNjEwMzE4/3yp_287_6710_gn_bjk.webp" , category: "Shoulder, Back"},
+#     {name: "Cat Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1720/MTQ3MTc0NjYxMzIxNDAxODA2/2hp_286_0574_bjk.webp" , category: "Spine"},
+#     {name: "Cobra Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1720/MTQ3MTU3MjczOTUxNjEwMzE4/3yp_287_6710_gn_bjk.webp" , category: "Shoulder, Upper torso"}
+
+# ])
+
+User.create([
+    {email: "shahrani_@hotmail.com", password: "hello"},
 
 ])
-
