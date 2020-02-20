@@ -1,33 +1,25 @@
 import Header from './Header';
-// import Head from 'next/head';
-import Router from 'next/router';
-// import NProgress from 'nprogress';
+import Navbar from './Navbar';
+import Head from 'next/head';
 
-// Router.onRoutechangeStart = url => {
-// 	console.log(url);
-// 	NProgress.start();
-// }
-
-// Router.onRouteChangeComplete = () => Nprogress.done();
-// Router.onRouteChangeError = () => NProgress.done();
-
-const layoutStyle = {
-	margin  : 20,
-	padding : 20,
-	border  : '1px solid #DDD'
-};
+// const layoutStyle = {
+// 	margin  : 20,
+// 	padding : 20,
+// 	border  : '1px solid #DDD'
+// };
 
 const Layout = (props, title) => (
-	<div style={layoutStyle}>
-		{/* <Head>
-			<title>Kickstarter</title>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"/>
-		</Head> */}
-		<Header />
+	// <div style={layoutStyle}>
+	<div>
+		<Head>
+			<title>Yoga Kickstarter</title>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"/>
+		</Head>
+		<Navbar />
 
-		{props.title}
+		{/* {props.title} */}
 		{props.children}
-		<footer>footer (layout component)</footer>
+		{/* <footer>footer (layout component)</footer> */}
 	</div>
 );
 

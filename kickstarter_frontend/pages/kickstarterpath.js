@@ -7,13 +7,23 @@ import PublicClass from './PublicClass';
 import { Component, Redirect } from 'react';
 import Router, { useRouter } from 'next/router';
 import Head from 'next/head';
+import Axios from 'axios';
 
 export default class Kickstarterpath extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			poses: [],
 			showDetails : false
 		};
+	}
+
+	componentDidMount() {
+		let token = "Bearer" + localStorage.getItem("jwt");
+		Axios({method: 'get', url: '/api/poses', headers: { 'Authorization': token }})
+			.then(response => {
+				this.setState({ poses: response.data})
+			}).catch(error => console.log('error', error))
 	}
 
 	// To redirect to private class
@@ -43,13 +53,70 @@ export default class Kickstarterpath extends Component {
 						crossorigin="anonymous"
 					/>
 				</Head>
-				<h1>Your Kickstarter pathway</h1>
-				<p>Page to display after logged in</p>
-				<p>Hi user, welcome to your....</p>
+				
+			
 				{/* <button onClick ={() => this.setState({showDetails: true})} className="class-box">Private Class</button> */}
-				<div class="card">
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">
+				
+				
+				
+				<div className="card-space">
+					<h1>Your Kickstarter pathway</h1>
+					<h3>Hi user, welcome to your....</h3>
+
+					<div className="container">
+						<div className="row ">
+							{/* First section  */}
+							<div className="col-sm special">
+								<Link href="/PrivateClass">
+									<div onClick={this.toPrivateClass}>
+									<h3>Private Class</h3>
+									<p>Book your initial assessment private class with one of our founders</p>	
+									<br />
+									<p>Insert image?</p>							
+									</div>
+								</Link>
+							</div>
+							{/* First section  */}
+							<div className="col-sm special">
+							<Link href="/PublicClass">
+									<div onClick={this.toPublicClass}>
+									<h3>Public Class</h3>
+									<p>Book your public class</p>	
+									<p>Recap and review your lesson</p>	
+									<br />
+									<p>Insert image?</p>							
+									</div>
+								</Link>
+							</div>
+							{/* First section  */}
+							<div className="col-sm special">
+								<h3>PublicClass</h3>
+							</div>
+							{/* First section  */}
+							<div className="col-sm special">
+								<h3>PublicClass</h3>
+							</div>
+							{/* First section  */}
+							<div className="col-sm special">
+								<h3>PublicClass</h3>
+							</div>
+							{/* First section  */}
+							<div className="col-sm special">
+								<h3>PublicClass</h3>
+							</div>
+							{/* First section  */}
+							<div className="col-sm special">
+								<h3>Private Class</h3>
+							</div>
+
+
+						</div>
+					</div>
+
+
+
+					{/* <ul className="">
+						<li className="">
 							<Link href="/PrivateClass">
 								<button onClick={this.toPrivateClass} className="class-box">
 									Private Class
@@ -57,14 +124,16 @@ export default class Kickstarterpath extends Component {
 							</Link>
 						</li>
 
-						<li class="list-group-item">
+						<li className="">
 							<Link href="/PrivateClass">
 								<button onClick={this.toPrivateClass} className="class-box">
 									Private Class
 								</button>
 							</Link>
 						</li>
-					</ul>
+					</ul> */}
+
+
 				</div>
 
 				{/* <Link href="/PrivateClass">
@@ -81,15 +150,27 @@ export default class Kickstarterpath extends Component {
 
 				<style jsx>
 					{`
-						.class-box {
-							width: 300px;
-							height: 100px;
-							border: 1px solid;
-							background-color: light-grey;
+						.card-space {
+							// margin-top: 50px;
+							padding-top: 5%;
+							padding-bottom: 5%;
 						}
 
-						.card {
-							width: 18rem;
+						.special {
+							border: 1px solid blue;
+							padding: 10px;
+						}
+
+						* { 
+							text-align: center;
+						}
+
+						p {
+							font-size: 12px;
+						}
+
+						h3 {
+							font-size: 20px;
 						}
 					`}
 				</style>

@@ -2,7 +2,7 @@ import Layout from '../components/MyLayout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Error from './_error';
-
+import Head from 'next/head';
 import { Component } from 'react';
 
 // import useSWR from 'swr';
@@ -36,8 +36,18 @@ export default class Mindbodyonline extends Component {
 		}
 
 		return (
-			<Layout title="">
-				<p>MBO API</p>
+			<Layout title="Class Schedule">
+				<Head>
+					<title>Class Schedule</title>
+					<link
+						rel="stylesheet"
+						href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+						integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+						crossorigin="anonymous"
+					/>
+				</Head>
+
+				<div className="container card-space">
 				{/* {console.log(schedule)} */}
 				{console.log(schedule.Classes)}
 
@@ -72,6 +82,27 @@ export default class Mindbodyonline extends Component {
 				{/* {schedule.ClassDescription.map((class) => (
 					{class.Name}
 				))} */}
+				</div>
+
+				<style jsx>{`
+
+					.card-space {
+						// margin-top: 50px;
+						padding-top: 5%;
+						padding-bottom: 5%;
+						text-align: center;
+						// display: inline-block;
+					}
+
+					li {
+						list-style: none;
+					}
+					`}
+				</style>
+
+
+
+
 			</Layout>
 		);
 	}

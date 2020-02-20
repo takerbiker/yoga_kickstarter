@@ -1,6 +1,9 @@
 class PosesController < ApplicationController
   before_action :set_pose, only: [:show, :update, :destroy]
 
+  # :authenticate_user 
+
+  
   # GET /poses
   def index
     @poses = Pose.all
@@ -35,7 +38,9 @@ class PosesController < ApplicationController
 
   # DELETE /poses/1
   def destroy
-    @pose.destroy
+    # if current_user.admin?
+      @pose.destroy
+    # end
   end
 
   private

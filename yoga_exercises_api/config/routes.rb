@@ -1,14 +1,23 @@
 Rails.application.routes.draw do
-  # root 'home#show'
+  scope '/api' do 
 
-  # get 'dashboard/show'
+    post 'user_token' => 'user_token#create'
+    post '/users' => 'users#create'
+  end
+    # post 'user_token' => 'user_token#create'
+    # post 'find_user' => 'users#find'
+    resources :users
+    resources :poses
+  # end
 
-  # get 'home/show'
-
-  resources :users
-  resources :poses
-
+  # For mindbody api. Should push it up
   get '/classes', to: 'mindbody#class_schedule'
+
+  post 'user_token' => 'user_token#create'
+
+  # root 'home#show'
+  # get 'dashboard/show'
+  # get 'home/show'
 
   # get 'auth/auth0/callback' => 'auth0#callback'
   # get 'auth/failure' => 'auth0#failure'

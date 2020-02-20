@@ -14,6 +14,8 @@
 # ])
 
 User.create([
-    {email: "shahrani_@hotmail.com", password: "hello"},
+    {username: "takerbiker", password: "takerbiker", password_confirmation: "takerbiker" },
+    {username: "admin", password: "admin", password_confirmation: "admin", admin: true }
 
 ])
+

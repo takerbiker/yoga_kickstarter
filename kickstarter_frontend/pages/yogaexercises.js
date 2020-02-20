@@ -32,6 +32,9 @@ export default class Yogaexercises extends Component {
 		}
 		return (
 			<Layout title="Yoga Exercises">
+				{console.log(poses)}
+				{/* {console.log(typeof this.props)}  */}
+
 				<Head>
 					<title>Your Yoga Journey</title>
 					<link
@@ -41,12 +44,83 @@ export default class Yogaexercises extends Component {
 						crossorigin="anonymous"
 					/>
 				</Head>
-				<h1>Exercises for beginners</h1>
-				<p>List out the exercises here, pull from API</p>
 
-				{/* {console.log(typeof this.props)}  */}
-				{console.log(poses)}
-				<ul>
+				<div className="container card-space">
+					<h3>Yoga Exercises</h3>
+					<div className="container-books">
+						{/* <div className="row"></div> */}
+						<div className="row">
+
+							{poses.map((pose) => (
+								<li key={pose.id}>
+									<div className="col listingCard col-sm-3">
+										
+										<img src={pose.image} className="img-fluid img-thumb"/>
+										{/* <div className="card-body"> */}
+											<p className="book-title">
+												<Link href="/p/[id]" as={`/p/${pose.id}`}>
+													<a>{pose.name}</a>
+												</Link>
+											</p>
+											<p className="listed-by">{pose.category}</p>
+										{/* </div> */}
+
+									</div>
+								</li>
+								))}
+						</div>
+						
+					</div>
+				</div>
+
+				<style jsx>{`
+					.card-space {
+						// margin-top: 50px;
+						padding-top: 5%;
+						padding-bottom: 5%;
+						text-align: center;
+						// display: inline-block;
+						font-family: "Permanent Marker";
+					}
+					
+					.container-books {
+						position: absolute;
+						top: 150px;
+						left: 80px;
+					}
+					
+					.listingCard {
+						text-align: center;
+					}
+
+					.book-title,
+					.listed-by {
+						color: black;
+						// display: inline-block;
+						margin: 0 auto;
+						width: 200px;
+					}
+					
+				
+					.img-thumb {
+						max-width: 200px;
+						height: 300px;
+						object-fit: cover;
+						margin-top: 50px;
+						box-shadow: 9px 3px 6px rgb(173, 173, 173);
+						// border: 2px solid black;
+						/* border-radius: 28px; */
+					}
+
+
+					li {
+						list-style-type: none;
+					}
+				`}</style>
+
+
+
+				{/* <ul>
 					{poses.map((pose) => (
 						<li key={pose.id}>
 							<div className="card">
@@ -62,7 +136,7 @@ export default class Yogaexercises extends Component {
 							</div>
 						</li>
 					))}
-				</ul>
+				</ul> */}
 				{/* <div className="card">
 					<img
 						src="https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg"
@@ -77,20 +151,7 @@ export default class Yogaexercises extends Component {
 					</div>
 				</div> */}
 
-				<style jsx>{`
-					.card {
-						width: 18rem;
-						border: orange solid 1px;
-					}
 
-					img {
-						width: 12rem;
-					}
-
-					li {
-						list-style-type: none;
-					}
-				`}</style>
 			</Layout>
 		);
 	}

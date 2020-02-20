@@ -1,6 +1,5 @@
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
-
 import fetch from 'isomorphic-unfetch'; // For fetch API
 import Error from './_error';
 import { Component } from 'react';
@@ -64,6 +63,7 @@ export default class Afterclassreview extends Component {
 		}
 		return (
 			<Layout title="After Class Review">
+
 				<Head>
 					<title>Review your class</title>
 					<link
@@ -73,84 +73,86 @@ export default class Afterclassreview extends Component {
 						crossorigin="anonymous"
 					/>
 				</Head>
-				<h1>Review your class</h1>
-				<h3>Might not need this page any more</h3>
-				<p>Tick all that apply. Which exercises did you learn during the class?</p>
-				Insert checkboxes
-				<p>Your comments (This is only for yourself)</p>
+				
 				{/* {console.log(typeof this.props)}  */}
 				{console.log(poses)}
-				{/* Checkboxes  */}
-				<div className="input-group mb-3">
-					{poses.map((pose) => (
-						<div key={pose.id}>
-							<div className="input-group-prepend">
-								<p className="form-control">{pose.name}</p>
-								<div className="input-group-text">
-									<input type="checkbox" aria-label="Checkbox button for following text input" />
-								</div>
-							</div>
-						</div>
-					))}
-				</div>
-				<ul>
-					{poses.map((pose) => (
-						<li key={pose.id}>
-							<div className="card">
-								{/* <img src={pose.image} className="card-img-top" alt="..." /> */}
-								<div className="card-body">
-									<p className="card-text">
-										<Link href="/p/[id]" as={`/p/${pose.id}`}>
-											<a>{pose.name}</a>
-										</Link>
-									</p>
-									<p>{pose.category}</p>
-								</div>
-							</div>
-						</li>
-					))}
-				</ul>
-				{/* Form for comments  */}
-				<form onSubmit={this.handleSubmit} className="">
-					<label htmlFor="comments" className="labels">
-						Comments
-					</label>
-					<textarea
-						type="text"
-						name="comments"
-						id="comments"
-						value={this.state.comments}
-						onChange={this.handleChange}
-					/>
 
-					<br />
-					<input className="btn btn-success" type="submit" value="Submit" />
-				</form>
-				{/* <div className="card">
-					<img
-						src="https://www.yogajournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ2MjI3ODcyMDE5OTgxOTIx/cow-face-with-eagle-arms-forhips.jpg"
-						className="card-img-top"
-						alt="..."
-					/>
-					<div className="card-body">
-						<p className="card-text">
-							Some quick example text to build on the card title and make up the bulk of the card's
-							content.
-						</p>
+				<div className="container card-space">
+					<h1>Review your class</h1>
+					<p>Which exercises did you learn during the class?</p>
+					<div className="container-poses row">
+						{poses.map((pose) => (
+							<li key={pose.id}>			
+									<img src={pose.image} className="img-fluid img-thumb"/>
+									<p className="book-title">
+									<input type="checkbox" aria-label="Checkbox button for following text input" />
+									<br />
+									<Link href="/p/[id]" as={`/p/${pose.id}`}>
+										<a>{pose.name}</a>
+									</Link>
+									</p>
+									<p className="listed-by">{pose.category}</p>
+
+							</li>
+						))}
+
+					{/* Form for comments  */}
+					<div className="container">
+						<form onSubmit={this.handleSubmit} className="">
+							<label htmlFor="comments" className="labels">
+								Comments
+							</label>
+							<textarea
+								type="text"
+								name="comments"
+								id="comments"
+								value={this.state.comments}
+								onChange={this.handleChange}
+							/>
+							<br />
+							<input className="btn btn-success" type="submit" value="Submit" />
+						</form>
 					</div>
-				</div> */}
+				
+					</div>
+				</div>
+
+
+
 				<style jsx>{`
-					.card {
-						width: 18rem;
-						border: orange solid 1px;
+					.labels {
+						text-align: center;
+						display: inline-block;
 					}
 
-					img {
-						width: 12rem;
+					.card-space {
+						// margin-top: 50px;
+						padding-top: 5%;
+						padding-bottom: 5%;
+						text-align: center;
+						// display: inline-block;
 					}
 
 					li {
 						list-style-type: none;
+					}
+
+					.img-thumb {
+						max-width: 90px;
+						height: 120px;
+						object-fit: cover;
+						// margin-top: 50px;
+						box-shadow: 9px 3px 6px rgb(173, 173, 173);
+						// border: 2px solid black;
+						/* border-radius: 28px; */
+					}
+
+					.book-title,
+					.listed-by {
+						color: black;
+						// display: inline-block;
+						margin: 0 auto;
+						width: 200px;
 					}
 				`}</style>
 			</Layout>
