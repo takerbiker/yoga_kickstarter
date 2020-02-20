@@ -14,17 +14,18 @@ export default class Kickstarterpath extends Component {
 		super(props);
 		this.state = {
 			poses: [],
-			showDetails : false
+			showDetails : false,
+			bookedFirstClass   : '',
 		};
 	}
 
-	componentDidMount() {
-		let token = "Bearer" + localStorage.getItem("jwt");
-		Axios({method: 'get', url: '/api/poses', headers: { 'Authorization': token }})
-			.then(response => {
-				this.setState({ poses: response.data})
-			}).catch(error => console.log('error', error))
-	}
+	// componentDidMount() {
+	// 	let token = "Bearer" + localStorage.getItem("jwt");
+	// 	Axios({method: 'get', url: '/api/poses', headers: { 'Authorization': token }})
+	// 		.then(response => {
+	// 			this.setState({ poses: response.data})
+	// 		}).catch(error => console.log('error', error))
+	// }
 
 	// To redirect to private class
 	toPrivateClass = () => {
@@ -33,7 +34,16 @@ export default class Kickstarterpath extends Component {
 			showDetails : true
 		});
 		console.log("Button's state is", this.state.showDetails);
+		<PrivateClass bookedFirstClass={this.bookedFirstClass} />
+
 	};
+
+	// Callback method 
+	bookedFirstClass = (data) => {
+		this.setState({
+			bookedFirstClass: data
+		})
+	}
 
 	render() {
 		// if (this.state.showDetails === true) {
@@ -67,6 +77,7 @@ export default class Kickstarterpath extends Component {
 						<div className="row ">
 							{/* First section  */}
 							<div className="col-sm special">
+							bookedFirstClass
 								<Link href="/PrivateClass">
 									<div onClick={this.toPrivateClass}>
 									<h3>Private Class</h3>

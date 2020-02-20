@@ -3,7 +3,7 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Error from './_error';
 import Head from 'next/head';
-import { Component } from 'react';
+import { Component,  } from 'react';
 
 // import useSWR from 'swr';
 
@@ -47,7 +47,8 @@ export default class Mindbodyonline extends Component {
 					/>
 				</Head>
 
-				<div className="container card-space">
+				<div className="card-space">
+					{/* <div className="container"> */}
 				{/* {console.log(schedule)} */}
 				{console.log(schedule.Classes)}
 
@@ -59,29 +60,22 @@ export default class Mindbodyonline extends Component {
 						<p>Start-date: {x.StartDateTime}</p>
 						<p>End date: {x.EndDateTime}</p>
 						<p>Availability: {x.IsAvailable}</p>
+						{/* <Link href="www.manutd.com"> */}
+							<a href={"https://clients.mindbodyonline.com/LoginLaunch?studioid=590475"}>Book class</a>
+						{/* </Link> */}
+
 					</li>
 				))}
 
 				{/* {console.log(schedule[1].ClassDescription)} */}
-				<p> Conditionals</p>
-				<ul>
-					<li>If active is true, display.</li>
-					<li>Display only when level is 1/2, show vacancy?</li>
-				</ul>
 				{/* <Link href="https://clients.mindbodyonline.com/LoginLaunch?studioid=590475"> */}
-				<a>Class A</a>
-				{/* </Link> */}
-				<br />
+					{/* </div> */}
 
-				{/* <Link href="https://clients.mindbodyonline.com/LoginLaunch?studioid=590475"> */}
-				<a>Class B</a>
-				{/* </Link> */}
-
-				{/* <p>{schedule.ClassDescription}</p> */}
-				{/* <p>{schedule.ClassDescription}</p> */}
-				{/* {schedule.ClassDescription.map((class) => (
-					{class.Name}
-				))} */}
+					{/* <div className="container ">
+						<Link href="https://clients.mindbodyonline.com/LoginLaunch?studioid=590475">
+							<h1>Book class</h1>
+						</Link>
+					</div> */}
 				</div>
 
 				<style jsx>{`

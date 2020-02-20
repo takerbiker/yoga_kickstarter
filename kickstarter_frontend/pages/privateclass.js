@@ -1,21 +1,55 @@
 import Layout from '../components/MyLayout';
+// import BookPrivate from '../components/BookPrivate';
 import Link from 'next/link';
 import Head from 'next/head';
 
 import { Component } from 'react';
 import { useRouter } from 'next/router';
 
-
-
 export default class PrivateClass extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-	// }
-	// this.state = {
-	// 	class: []
-	// }
+	constructor(props) {
+		super(props);
+		this.state = {
+			// booked   : false,
+			comments : '',
+			// value    : 'Bianca',
+			bookedFirstClass: ''
+		};
+	}
+
+	// handleComments = (e) => {
+	// 	console.log('Inside comments sections');
+	// 	e.preventDefault();
+	// 	// let value = e.target.value;
+	// 	this.setState({ comments: e.target.value });
+	// };
+
+	// handleSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	let value = e.target.value;
+	// 	this.setState({ comments: value });
+
+	// 	fetch('....', {
+	// 		method : 'POST',
+	// 		body   : JSON.stringify(comments)
+	// 	});
+	// };
+
+	handleChange = (e) => {
+		this.setState({ comments: e.target.value });
+		// this.props.bookedFirstClass(this.state.bookedFirstClass)
+	};
+
+	handleSubmit = (e) => {
+		console.log('Inside comments section');
+		console.log(this.state.comments);
+
+		e.preventDefault();
+		alert('A comment was submitted: ' + this.state.comments);
+	};
 
 	render() {
+		console.log(this.props.bookedFirstClass)
 		return (
 			<Layout title="Your private class">
 				<Head>
@@ -33,10 +67,11 @@ export default class PrivateClass extends React.Component {
 
 					<div className="row">
 						<div className="first-row">
-							<Link href="/">
-								<h3>Book MBO</h3>
-							</Link>							
+						<Link href="/BookPrivateSession">
+							Book Your First Session
+						</Link>
 						</div>
+
 					</div>
 
 					{/* <div className="row">
@@ -49,32 +84,36 @@ export default class PrivateClass extends React.Component {
 
 					<div className="row">
 						<div className="first-row">
-							<Link href="/">
-								<h3>Comments</h3>
-							</Link>	
+							<form onSubmit={this.handleSubmit}>
+								<label>
+									Comments:<br />
+									<textarea value={this.state.comments} onChange={this.handleChange} />
+								</label>
+								<br />
+								<input className="btn btn-success" type="submit" value="Submit" />{' '}
+							</form>
 						</div>
 					</div>
+					{this.state.comments}
+
+					<div>Show comments by instructor</div>
 				</div>
 
+				<style jsx>
+					{`
+						.card-space {
+							// margin-top: 50px;
+							padding-top: 5%;
+							padding-bottom: 5%;
+							text-align: center;
+							// display: inline-block;
+						}
 
-
-				<style jsx>{`
-
-					.card-space {
-						// margin-top: 50px;
-						padding-top: 5%;
-						padding-bottom: 5%;
-						text-align: center;
-						// display: inline-block;
-					}
-
-					.first-row {
-						border: blue 1px solid;
-						width: 500px;
-						margin: 0 auto;
-					}
-
-
+						.first-row {
+							border: blue 1px solid;
+							width: 500px;
+							margin: 0 auto;
+						}
 					`}
 				</style>
 			</Layout>

@@ -6,12 +6,26 @@ import Head from 'next/head';
 
 
 export default class PublicClass extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-	// }
-	// this.state = {
-	// 	class: []
-	// }
+	constructor(props) {
+		super(props);
+		this.state = {
+			comments: "",
+			lessonReviewed: false,
+			classBooked: false
+		}
+	}
+
+	handleChange = e => {
+		this.setState({comments: e.target.value});
+
+	}
+
+	// Handle Submit Comments 
+	handleSubmitComments = e => {
+		e.preventDefault();
+		console.log(this.state.comments)
+	}
+
 
 	render() {
 		return (
@@ -31,8 +45,8 @@ export default class PublicClass extends React.Component {
 
 					<div className="row">
 						<div className="first-row">
-							<Link href="/">
-								<h3>Book MBO</h3>
+							<Link href="/mindbodyonline">
+								<h3>Check out the classes available to you!</h3>
 							</Link>							
 						</div>
 					</div>
@@ -52,6 +66,26 @@ export default class PublicClass extends React.Component {
 							</Link>	
 						</div>
 					</div>
+
+					<div className="row">
+						<div className="first-row">
+							<form onSubmit={this.handleSubmitComments}>
+								<label>
+									Comments:<br />
+									<textarea value={this.state.comments} onChange={this.handleChange} />
+								</label>
+								<br />
+								<input className="btn btn-success" type="submit" value="Submit" />{' '}
+							</form>
+						</div>
+					</div>
+					{this.state.comments}
+					
+					<div className="row">
+
+
+					</div>
+
 				</div>
 
 

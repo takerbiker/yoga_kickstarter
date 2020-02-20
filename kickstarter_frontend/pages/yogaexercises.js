@@ -48,7 +48,6 @@ export default class Yogaexercises extends Component {
 				<div className="container card-space">
 					<h3>Yoga Exercises</h3>
 					<div className="container-books">
-						{/* <div className="row"></div> */}
 						<div className="row">
 
 							{poses.map((pose) => (
@@ -69,7 +68,6 @@ export default class Yogaexercises extends Component {
 								</li>
 								))}
 						</div>
-						
 					</div>
 				</div>
 
