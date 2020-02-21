@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-    include Knock::Authenticable 
+    # include Knock::Authenticable 
     # undef_method :current_user
     # private
     # # Define unauthorized access json response

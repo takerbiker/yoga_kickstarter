@@ -11,9 +11,9 @@ export default class PrivateClass extends React.Component {
 		super(props);
 		this.state = {
 			// booked   : false,
-			comments : '',
+			comments                : '',
 			// value    : 'Bianca',
-			bookedFirstClass: ''
+			bookedPrivateFirstClass : this.props.bookedPrivateFirstClass
 		};
 	}
 
@@ -49,7 +49,12 @@ export default class PrivateClass extends React.Component {
 	};
 
 	render() {
-		console.log(this.props.bookedFirstClass)
+		// console.log(this.props.bookedFirstClass);
+		{
+			this.state.bookedPrivateFirstClass;
+		}
+		const recordedComments = this.state.comments;
+
 		return (
 			<Layout title="Your private class">
 				<Head>
@@ -64,16 +69,13 @@ export default class PrivateClass extends React.Component {
 
 				<div className="container card-space">
 					<h1>What would you like to do?</h1>
-
 					<div className="row">
 						<div className="first-row">
-						<Link href="/BookPrivateSession">
-							Book Your First Session
-						</Link>
+							<Link href="BookPrivateSession">
+								<a> Book Your First Session</a>
+							</Link>
 						</div>
-
 					</div>
-
 					{/* <div className="row">
 						<div className="first-row">
 							<Link href="/Afterclassreview">
@@ -81,7 +83,6 @@ export default class PrivateClass extends React.Component {
 							</Link>							
 						</div>
 					</div> */}
-
 					<div className="row">
 						<div className="first-row">
 							<form onSubmit={this.handleSubmit}>
@@ -94,8 +95,8 @@ export default class PrivateClass extends React.Component {
 							</form>
 						</div>
 					</div>
-					{this.state.comments}
-
+					{recordedComments}
+					{/* {this.state.comments} */}
 					<div>Show comments by instructor</div>
 				</div>
 

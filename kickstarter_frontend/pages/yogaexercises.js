@@ -34,7 +34,6 @@ export default class Yogaexercises extends Component {
 			<Layout title="Yoga Exercises">
 				{console.log(poses)}
 				{/* {console.log(typeof this.props)}  */}
-
 				<Head>
 					<title>Your Yoga Journey</title>
 					<link
@@ -45,48 +44,55 @@ export default class Yogaexercises extends Component {
 					/>
 				</Head>
 
-				<div className="container card-space">
-					<h3>Yoga Exercises</h3>
-					<div className="container-books">
-						<div className="row">
-
-							{poses.map((pose) => (
-								<li key={pose.id}>
-									<div className="col listingCard col-sm-3">
-										
-										<img src={pose.image} className="img-fluid img-thumb"/>
-										{/* <div className="card-body"> */}
+				<div className="card-space">
+					<img
+						className="imageHead"
+						src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						alt=""
+					/>
+					<div className="container">
+						<h3>Yoga Exercises</h3>
+						<div className="container-books">
+							<div className="row">
+								{poses.map((pose) => (
+									<li key={pose.id}>
+										<div className="col listingCard col-sm-3">
+											<img src={pose.image} className="img-fluid img-thumb" />
+											{/* <div className="card-body"> */}
 											<p className="book-title">
 												<Link href="/p/[id]" as={`/p/${pose.id}`}>
 													<a>{pose.name}</a>
 												</Link>
 											</p>
 											<p className="listed-by">{pose.category}</p>
-										{/* </div> */}
-
-									</div>
-								</li>
+											{/* </div> */}
+										</div>
+									</li>
 								))}
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<style jsx>{`
 					.card-space {
-						// margin-top: 50px;
-						padding-top: 5%;
-						padding-bottom: 5%;
-						text-align: center;
-						// display: inline-block;
-						font-family: "Permanent Marker";
+						padding-top: 3%;
 					}
-					
+
+					.imageHead {
+						// background-size: contain;
+						width: 100%;
+						height: 300px;
+						object-fit: cover;
+						object-position: 0 80%;
+					}
+
 					.container-books {
-						position: absolute;
+						// position: absolute;
 						top: 150px;
 						left: 80px;
 					}
-					
+
 					.listingCard {
 						text-align: center;
 					}
@@ -98,8 +104,7 @@ export default class Yogaexercises extends Component {
 						margin: 0 auto;
 						width: 200px;
 					}
-					
-				
+
 					.img-thumb {
 						max-width: 200px;
 						height: 300px;
@@ -110,13 +115,10 @@ export default class Yogaexercises extends Component {
 						/* border-radius: 28px; */
 					}
 
-
 					li {
 						list-style-type: none;
 					}
 				`}</style>
-
-
 
 				{/* <ul>
 					{poses.map((pose) => (
@@ -148,8 +150,6 @@ export default class Yogaexercises extends Component {
 						</p>
 					</div>
 				</div> */}
-
-
 			</Layout>
 		);
 	}

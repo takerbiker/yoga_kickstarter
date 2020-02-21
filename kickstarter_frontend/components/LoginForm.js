@@ -1,4 +1,3 @@
-// import { loginUser } from '../lib/auth.js';
 import fetch from 'isomorphic-unfetch'; // For fetch API
 import Head from 'next/head';
 import { Component } from 'react';
@@ -22,97 +21,47 @@ class LoginForm extends React.Component {
 		this.setState({ [event.target.id]: event.target.value });
 	};
 
-	// handleSubmit = (event) => {
-	// 	event.preventDefault();
-	// 	fetch('/sessions', {
-	// 		body    : JSON.stringify(this.state),
-	// 		method  : 'POST',
-	// 		headers : {
-	// 			Accept         : 'application/json, text/plain, */*',
-	// 			'Content-Type' : 'application/json'
-	// 		}
-	// 	})
-	// 		.then((loggedInUser) => {
-	// 			return loggedInUser.json();
-	// 		})
-	// 		.then((jsonedUser) => {
-	// 			if (jsonedUser.message === null) {
-	// 				this.setState({
-	// 					message : 'User cannot be found'
-	// 				});
-	// 			} else if (jsonedUser.message === false) {
-	// 				this.setState({
-	// 					message : 'Wrong Password'
-	// 				});
-	// 			} else {
-	// 				console.log(jsonedUser);
-	// 				this.setState({
-	// 					currentUser : jsonedUser
-	// 				});
-	// 				console.log('Current user is: ', this.state.currentUser);
-	// 			}
-	// 		})
-	// 		.then(() => {
-	// 			this.props.userState(this.state.currentUser);
-	// 		})
-	// 		.catch((error) => console.log(error));
-	// };
-
 	handleSubmit = (event) => {
 		event.preventDefault();
-        let request = { "auth": { "username": this.state.username, "password": this.state.password } };
-        // http://localhost:3000/users
-
-        // /api/user_token
-		fetch('http://localhost:3000/api/user_token', {
+		fetch('http://localhost:3000/users', {
 			method  : 'POST',
+			body    : JSON.stringify(this.state),
 			headers : {
+				Accept       : 'application/json, text/plain, */*',
 				Content_Type : 'application/json'
-			},
-			body    : JSON.stringify(request)
+			}
 		})
-			.then(function(rsp) {
-				if (!rsp.ok) {
-					throw Error(rsp.statusText);
+			.then((loggedInUser) => {
+				return loggedInUser.json();
+			})
+			.then((jsonedUser) => {
+				if (jsonedUser.message === null) {
+					this.setState({
+						message : 'User cannot be found'
+					});
+				} else if (jsonedUser.message === false) {
+					this.setState({
+						message : 'Wrong Password Bro!'
+					});
+				} else {
+					console.log(jsonedUser);
+					this.setState({
+						currentUser : jsonedUser
+					});
+					console.log('Current User is: ', this.state.currentUser);
 				}
-				return rsp.json();
 			})
-			.then((data) => localStorage.setItem('jwt', data.jwt))
 			.then(() => {
-				this.setState({
-					redirect : true
-				});
+				this.props.userState(this.state.currentUser);
 			})
-			.catch((error) => {
-				console.log('error here',error);
-			});
+			.catch((error) => console.log(error));
 	};
 
-	// handleSubmit = event => {
-	//     event.preventDefault();
-
-	//     // const { username, password } = this.state;
-	//     // console.log(this.state);
-
-	//     const username = document.getElementById('username').value;
-	//     const password = document.getElementById('password').value;
-
-	//     const request = {"auth": {"username": username, "password": password }};
-
-	//     post('/api/user_token', request)
-	//         .then(response => {
-	//             localStorage.setItem("jwt", response.data.jwt);
-	//             this.props.history.push("/")
-	//         })
-	//         .catch(error => console.log("Login erro", error));
-
-	//     // loginUser(username, password)
-	// }
-
 	render() {
-		if (this.state.redirect === true) {
-			return <Redirect to="/kickstarter" />;
-		}
+		// if (this.state.redirect === true) {
+		// 	return <Redirect to="/kickstarter" />;
+		// }
+		console.log(this.state.user, this.state.password);
 		return (
 			<Layout title="Log in Page">
 				<Head>
@@ -126,17 +75,6 @@ class LoginForm extends React.Component {
 				</Head>
 
 				<div className="bodyCenter">
-					{/* <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input type="email" name="email" placeholder="email" onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <input type="password" name="password" placeholder="password" onChange={this.handleChange}/>
-                    </div>
-                    <button type="submit">Submit</button>
-
-                </form>     */}
-
 					<form onSubmit={this.handleSubmit} className="form-signin">
 						<img
 							className="mb-4"
