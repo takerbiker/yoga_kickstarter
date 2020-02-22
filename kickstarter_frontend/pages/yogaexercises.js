@@ -45,26 +45,40 @@ export default class Yogaexercises extends Component {
 				</Head>
 
 				<div className="card-space">
-					<img
+					{/* <img
 						className="imageHead"
 						src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 						alt=""
-					/>
+					/> */}
+
+					{/* <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="..." alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+			</div> */}
+
 					<div className="container">
-						<h3>Yoga Exercises</h3>
-						<div className="container-books">
+						<h3 className="textCenter">Basic Yoga Exercises</h3>
+						<p>
+							Just getting started but have no idea where to start? Here are the 20 basic exercises that
+							you should get familiar with!
+						</p>
+						<div className="">
 							<div className="row">
 								{poses.map((pose) => (
 									<li key={pose.id}>
-										<div className="col listingCard col-sm-3">
-											<img src={pose.image} className="img-fluid img-thumb" />
+										<div className="card">
+											<img src={pose.image} className="card-img-top" />
 											{/* <div className="card-body"> */}
-											<p className="book-title">
+											<p className="book-title card-title">
 												<Link href="/p/[id]" as={`/p/${pose.id}`}>
 													<a>{pose.name}</a>
 												</Link>
 											</p>
-											<p className="listed-by">{pose.category}</p>
+											<p className="listed-by card-text">{pose.category}</p>
 											{/* </div> */}
 										</div>
 									</li>
@@ -76,7 +90,11 @@ export default class Yogaexercises extends Component {
 
 				<style jsx>{`
 					.card-space {
-						padding-top: 3%;
+						padding-top: 4%;
+					}
+
+					.textCenter {
+						text-align: center;
 					}
 
 					.imageHead {
@@ -89,12 +107,23 @@ export default class Yogaexercises extends Component {
 
 					.container-books {
 						// position: absolute;
-						top: 150px;
-						left: 80px;
+						// top: 150px;
+						// left: 80px;
 					}
 
-					.listingCard {
+					// .listingCard {
+					// 	text-align: center;
+					// }
+
+					.card {
 						text-align: center;
+						width: 14rem;
+						// height: 16rem;
+						display: block;
+						// margin: 0 auto;
+						margin: 10px;
+						box-shadow: 9px 3px 6px rgb(240, 240, 240);
+						padding-bottom: 20px;
 					}
 
 					.book-title,
@@ -102,15 +131,15 @@ export default class Yogaexercises extends Component {
 						color: black;
 						// display: inline-block;
 						margin: 0 auto;
-						width: 200px;
+						// width: 200px;
 					}
 
 					.img-thumb {
-						max-width: 200px;
-						height: 300px;
-						object-fit: cover;
-						margin-top: 50px;
-						box-shadow: 9px 3px 6px rgb(173, 173, 173);
+						// max-width: 200px;
+						// height: 200px;
+						// object-fit: contain;
+						// margin-top: 50px;
+						// box-shadow: 9px 3px 6px rgb(173, 173, 173);
 						// border: 2px solid black;
 						/* border-radius: 28px; */
 					}

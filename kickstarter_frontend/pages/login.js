@@ -69,8 +69,18 @@ export default class Login extends React.Component {
 					/>
 				</Head>
 				{console.log(users)}
-				<div className="bodyCenter">
+				<div className="bodyCenter card card-space">
 					{/* FORM  */}
+
+					{/* <div class="card" style="width: 18rem;">
+						<img class="card-img-top" src="..." alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div> */}
+
 					<form onSubmit={this.handleSubmit} className="form-signin">
 						<img
 							className="mb-4"
@@ -115,12 +125,16 @@ export default class Login extends React.Component {
 				</div>
 				<style jsx>{`
 					.bodyCenter {
-						width: 350px;
+						width: 400px;
 						display: block;
 						margin: 0 auto;
-						padding-top: 5%;
-						padding-bottom: 5%;
 						text-align: center;
+						box-shadow: 9px 7px 20px -10px rgba(0, 0, 0, 0.75);
+					}
+
+					.card-space {
+						margin-top: 5%;
+						padding: 5%;
 					}
 				`}</style>
 			</Layout>

@@ -4,7 +4,7 @@
     "static/development/dll/dll_d6a88dbe3071bd165157.js.map"
   ],
   "pages": {
-    "/": [
+    "/PrivateClass": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -21,19 +21,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/afterclassreview": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/kickstarterpath": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/yogaexercises": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -44,13 +44,13 @@ export default class Index extends React.Component {
 						crossOrigin="anonymous"
 					/>
 				</Head>
-
 				{/* Jumbo design  */}
-				{/* <div className="jumbo1">
+				<div className="jumbo1">
 					<div className="container">
-						<h1 className="display-4 jumbo1words">Image</h1>
+						<h1 className="jumbo1words">Come join us!</h1>
 					</div>
-				</div> */}
+				</div>
+
 				<div className="container card-space">
 					<div className="row">
 						{/* Left-side  */}
@@ -108,15 +108,12 @@ export default class Index extends React.Component {
 						</div>
 					</div>
 				</div>
-
 				{/* {this.state.currentUser ? (
 					<Kickstarterpath currentUser={this.state.currentUser} />
 				) : (
 					<Login userState={this.userState} />
 				)} */}
-
 				{/* <Kickstarterpath currentUser={this.state.currentUser} />{' '} */}
-
 				{/* <img src="/images/test.jpg" /> */}
 				<style jsx>{`
 					.col-sm {
@@ -150,10 +147,10 @@ export default class Index extends React.Component {
 						box-shadow: 9px 7px 25px -10px rgba(0, 0, 0, 0.55);
 					}
 
-					img {
-						object-fit: cover;
-						object-position: 0 70%;
-					}
+					// img {
+					// 	object-fit: contain;
+					// 	// object-position: 0 70%;
+					// }
 
 					.leftImage {
 						margin-right: 10px;
@@ -161,18 +158,20 @@ export default class Index extends React.Component {
 					}
 
 					.jumbo1 {
-						background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-						background-size: contain;
-						background-position: 10% 30%;
+						background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+							url('https://i0.wp.com/www.yogaplus.sg/wp-content/uploads/2019/07/171013-171013-First-Cut-Yoga-Arab-St-2.0-1-1.jpg?w=2520&ssl=1');
+						background-size: cover;
+						// background-position: 10% 30%;
 						/* opacity: 80%; */
-						margin-top: 3%;
+						min-height: 300px;
+						padding-top: 20%;
 						padding-bottom: 20%;
 					}
 
-					// .jumbo1words {
-					// 	color: white;
-					// 	font-family: "Permanent Marker";
-					// }
+					.jumbo1words {
+						color: white;
+						font-family: "Permanent Marker";
+					}
 				`}</style>
 			</Layout>
 		);
