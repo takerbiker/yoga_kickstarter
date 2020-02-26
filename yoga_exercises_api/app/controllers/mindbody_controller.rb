@@ -2,6 +2,8 @@ require 'faraday'
 
 class MindbodyController < ApplicationController
     
+    
+    
     def class_schedule
  
         resp = Faraday.get('https://api.mindbodyonline.com/public/v6/class/classes', {},
