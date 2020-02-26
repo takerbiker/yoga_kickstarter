@@ -22529,3 +22529,130 @@ No serializer found for resource: #<User id: 1, username: "takerbiker", password
 Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1274)
 
 
+Started GET "/poses" for ::1 at 2020-02-26 14:12:42 +0800
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosesController#index as */*
+  [1m[36mPose Load (2.9ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:11:in `index'
+No serializer found for resource: #<Pose id: 2, name: "Cat Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_sr...", category: "Spine", created_at: "2020-02-09 15:04:18", updated_at: "2020-02-09 15:04:18">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Pose::ActiveRecord_Relation (7.21ms)
+Completed 200 OK in 63ms (Views: 45.1ms | ActiveRecord: 14.6ms | Allocations: 7842)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:12:44 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.42ms)
+Completed 200 OK in 47ms (Views: 31.2ms | ActiveRecord: 5.8ms | Allocations: 6714)
+
+
+Started GET "/poses" for ::1 at 2020-02-26 14:12:46 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.5ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:11:in `index'
+No serializer found for resource: #<Pose id: 2, name: "Cat Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_sr...", category: "Spine", created_at: "2020-02-09 15:04:18", updated_at: "2020-02-09 15:04:18">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Pose::ActiveRecord_Relation (3.77ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 2779)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:12:51 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.96ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 1293)
+
+
+Started GET "/classes" for ::1 at 2020-02-26 14:13:12 +0800
+Processing by MindbodyController#class_schedule as */*
+Completed 200 OK in 742ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1550)
+
+
+Started GET "/poses" for ::1 at 2020-02-26 14:13:16 +0800
+Processing by PosesController#index as */*
+  [1m[36mPose Load (0.4ms)[0m  [1m[34mSELECT "poses".* FROM "poses"[0m
+  ↳ app/controllers/poses_controller.rb:11:in `index'
+No serializer found for resource: #<Pose id: 2, name: "Cat Pose", image: "https://www.yogajournal.com/.image/c_limit%2Ccs_sr...", category: "Spine", created_at: "2020-02-09 15:04:18", updated_at: "2020-02-09 15:04:18">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Pose::ActiveRecord_Relation (7.39ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 2760)
+
+
+Started GET "/classes" for ::1 at 2020-02-26 14:13:30 +0800
+Processing by MindbodyController#class_schedule as */*
+Completed 200 OK in 598ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 931)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:13:51 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.35ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 1274)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:13:52 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.47ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 1274)
+
+
+Started GET "/comments" for ::1 at 2020-02-26 14:14:01 +0800
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 82ms (Views: 54.8ms | ActiveRecord: 13.9ms | Allocations: 6059)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:14:14 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.62ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1274)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:14:58 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.13ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1274)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-02-26 14:15:03 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.41ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1274)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:15:30 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.81ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms | Allocations: 1274)
+
+
+Started GET "/users" for ::1 at 2020-02-26 14:15:43 +0800
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+No serializer found for resource: #<User id: 1, username: "takerbiker", password_digest: [FILTERED], admin: false, created_at: "2020-02-18 16:44:38", updated_at: "2020-02-18 16:44:38", comments_1: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.6ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1274)
+
+

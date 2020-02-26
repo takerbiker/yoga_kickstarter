@@ -37,7 +37,7 @@ export default class Login extends React.Component {
 		event.preventDefault();
 		console.log(this.state.users);
 		if (this.state.username === 'takerbiker' && this.state.password === 'hello') {
-			Router.push('/kickstarterpathpublic');
+			Router.push('/kickstarterpathc');
 		} else if (this.state.username === 'takerbiker' && this.state.password === 'takerbiker') {
 			Router.push('/kickstarterpath');
 		} else if (this.state.username === 'admin') {

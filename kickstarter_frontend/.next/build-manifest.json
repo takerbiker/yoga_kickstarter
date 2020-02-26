@@ -8,6 +8,62 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/About": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Adminprofile": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Afterclassreview": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Kickstarterpathlogin": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Kickstarterpathpublic": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Kickstarterpathpublic2": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Kickstarterpathpublic3": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Mindbodyonline": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Mindbodyonline2": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/PrivateClass": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/PrivateClass2": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/PublicClass": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/PublicClass2": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/Yogaexercises": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js",
@@ -22,6 +78,14 @@
       "static/runtime/polyfills.js.map"
     ],
     "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/kickstarterpath": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/kickstarterpathc": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

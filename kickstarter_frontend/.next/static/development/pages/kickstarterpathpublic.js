@@ -12533,7 +12533,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 18:
 /*!********************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fkickstarterpathpublic&absolutePagePath=%2FUsers%2Fshahranirahiman%2FProjects%2Fyoga_kickstarter%2Fkickstarter_frontend%2Fpages%2Fkickstarterpathpublic.js ***!
   \********************************************************************************************************************************************************************************************************/
@@ -12556,5 +12556,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[18,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=kickstarterpathpublic.js.map
