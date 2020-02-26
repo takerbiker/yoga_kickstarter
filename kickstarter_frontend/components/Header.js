@@ -36,7 +36,7 @@
 // 		<Link href="/kickstarterpath">
 // 			<a style={linkStyle}>Your kickstarter journey</a>
 // 		</Link>
-// 		<Link href="/afterclassreview">
+// 		<Link href="/Afterclassreview">
 // 			<a style={linkStyle}>After class review. (To delete)</a>
 // 		</Link>
 // 		<Link href="/mindbodyonline">
@@ -44,11 +44,6 @@
 // 		</Link>
 
 // 		{/* <p>Above: Part of header</p> */}
-
-
-
-
-
 
 // 	</nav>
 // 	</Layout>

@@ -17,16 +17,19 @@ class Navbar extends React.Component {
 					<link
 						rel="stylesheet"
 						href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-						integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-						crossorigin="anonymous"
+					/>
+					<link
+						href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800|Noto+Serif+SC:400,600,900|Paytone+One|Poiret+One|Roboto+Mono:400,500,700&display=swap"
+						rel="stylesheet"
 					/>
 				</Head>
 
 				<nav className="navbar navbar-expand-md navbar-dark fixed-top">
-					<Link href="/" className="navbar-brand">
-						<a>Yoga Kickstarter</a>
-					</Link>
-
+					<div className="title">
+						<Link href="/">
+							<a>Yoga Kickstarter</a>
+						</Link>
+					</div>
 					<button
 						className="navbar-toggler "
 						type="button"
@@ -42,37 +45,22 @@ class Navbar extends React.Component {
 					<div className="collapse navbar-collapse" id="navbarsExampleDefault">
 						<ul className="navbar-nav ml-auto">
 							<li className="nav-item active">
-								<Link href="/" className="nav-link">
+								<Link href="/">
 									<a>Home</a>
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link href="/about" className="nav-link">
+								<Link href="/About">
 									<a>About</a>
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link href="/yogaexercises" className="nav-link">
-									<a>Yoga Exercises</a>
+								<Link href="/Yogaexercises">
+									<a>Basic Asanas</a>
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link href="/kickstarterpath" className="nav-link">
-									<a>Kickstarter Path</a>
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link href="/afterclassreview" className="nav-link">
-									<a>After class review(delete)</a>
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link href="/mindbodyonline" className="nav-link">
-									<a>Mindbody API</a>
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link href="/login" className="nav-link">
+								<Link href="/login">
 									<a>Log In</a>
 								</Link>
 							</li>
@@ -105,16 +93,31 @@ class Navbar extends React.Component {
 
 				<style jsx>
 					{`
-						* {
-							color: black;
+						.nav-item {
+							// font-color: black;
+							text-color: black;
 							text-align: right;
-							font-family: "Open Sans", sans-serif;
-							font-size: 1rem;
+							font-family: "Nanum Myeongjo", 700;
+							font-size: 18px;
 							text-transform: lowercase;
 							// padding: 3px;
 						}
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+
+						.title {
+							font-family: "Roboto Mono";
+							font-size: 20px;
+						}
+
 						li {
 							padding: 4px;
+							padding-right: 6px;
+							// text-decoration: bullet;
+							// list-style-type: circle;
 						}
 					`}
 				</style>

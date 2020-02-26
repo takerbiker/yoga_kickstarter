@@ -35,54 +35,46 @@ export default class Yogaexercises extends Component {
 				{console.log(poses)}
 				{/* {console.log(typeof this.props)}  */}
 				<Head>
-					<title>Your Yoga Journey</title>
+					<title>Basic Asanas</title>
 					<link
 						rel="stylesheet"
 						href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-						integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-						crossorigin="anonymous"
 					/>
 				</Head>
-
-				<div className="card-space">
-					{/* <img
+				<div className="jumbo1">
+					<div className="container">
+						<div className="card-space ">
+							{/* <img
 						className="imageHead"
 						src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 						alt=""
 					/> */}
 
-					{/* <div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="..." alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-			</div> */}
-
-					<div className="container">
-						<h3 className="textCenter">Basic Yoga Exercises</h3>
-						<p>
-							Just getting started but have no idea where to start? Here are the 20 basic exercises that
-							you should get familiar with!
-						</p>
-						<div className="">
-							<div className="row">
-								{poses.map((pose) => (
-									<li key={pose.id}>
-										<div className="card">
-											<img src={pose.image} className="card-img-top" />
-											{/* <div className="card-body"> */}
-											<p className="book-title card-title">
-												<Link href="/p/[id]" as={`/p/${pose.id}`}>
-													<a>{pose.name}</a>
-												</Link>
-											</p>
-											<p className="listed-by card-text">{pose.category}</p>
-											{/* </div> */}
-										</div>
-									</li>
-								))}
+							<div className="container textCenter">
+								<h3>Basic Yoga Asanas (Exercises)</h3>
+								<p>
+									Just getting started but have no idea where to start? Here are the 12 basic asanas
+									that you should get familiar with!
+								</p>
+								<div className="row">
+									{/* <div className="column"> */}
+									{poses.map((pose) => (
+										<li key={pose.id}>
+											<div className="card">
+												<img src={pose.image} className="card-img-top" />
+												{/* <div className="card-body"> */}
+												<p className="book-title card-title">
+													<Link href="/p/[id]" as={`/p/${pose.id}`}>
+														<a>{pose.name}</a>
+													</Link>
+												</p>
+												<p className="listed-by card-text">{pose.category}</p>
+												{/* </div> */}
+											</div>
+										</li>
+									))}
+									{/* </div> */}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -91,10 +83,17 @@ export default class Yogaexercises extends Component {
 				<style jsx>{`
 					.card-space {
 						padding-top: 4%;
+						// margin: 0 auto;
 					}
 
 					.textCenter {
 						text-align: center;
+					}
+
+					.row {
+						text-align: center;
+						// display: inline-block;
+						margin: 0 auto;
 					}
 
 					.imageHead {
@@ -122,7 +121,7 @@ export default class Yogaexercises extends Component {
 						display: block;
 						// margin: 0 auto;
 						margin: 10px;
-						box-shadow: 9px 3px 6px rgb(240, 240, 240);
+						box-shadow: 6px 3px 6px rgb(110, 110, 110);
 						padding-bottom: 20px;
 					}
 
@@ -133,19 +132,27 @@ export default class Yogaexercises extends Component {
 						margin: 0 auto;
 						// width: 200px;
 					}
-
-					.img-thumb {
-						// max-width: 200px;
-						// height: 200px;
-						// object-fit: contain;
-						// margin-top: 50px;
-						// box-shadow: 9px 3px 6px rgb(173, 173, 173);
-						// border: 2px solid black;
-						/* border-radius: 28px; */
+					img {
+						// object-fit: cover;
+						// width: 100px;
 					}
 
+					.jumbo1 {
+						background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+							url('https://scontent.fsin3-1.fna.fbcdn.net/v/t1.0-9/15055786_369661510038653_1854036922822573829_n.jpg?_nc_cat=111&_nc_oc=AQk5LNP_v65VIE--9UTxOylX26rpHyGTx3dNTIu76BUMMvKad3eAdAUC1CHKRmWUsrk&_nc_ht=scontent.fsin3-1.fna&oh=4040be850d377a868251d2dfcc379de3&oe=5EBFD952');
+						background-size: cover;
+						background-position: 10% 50%;
+						/* opacity: 80%; */
+						min-height: 300px;
+						// padding-top: 20%;
+						// padding-bottom: 20%;
+					}
 					li {
 						list-style-type: none;
+					}
+
+					a {
+						color: light-blue;
 					}
 				`}</style>
 

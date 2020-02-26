@@ -4,7 +4,7 @@
     "static/development/dll/dll_d6a88dbe3071bd165157.js.map"
   ],
   "pages": {
-    "/PrivateClass": [
+    "/": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -21,7 +21,15 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/kickstarterpath": [
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/kickstarterpathpublic": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/login": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -5,7 +5,6 @@ import Error from './_error';
 import Head from 'next/head';
 import { Component } from 'react';
 import classSchedule from '../base/mindbodyonline.js';
-
 // import useSWR from 'swr';
 
 export default class Mindbodyonline extends Component {
@@ -35,9 +34,6 @@ export default class Mindbodyonline extends Component {
 		if (statusCode) {
 			return <Error statusCode={statusCode} />;
 		}
-		{
-			/* {console.log(schedule[1].ClassDescription)} */
-		}
 
 		return (
 			<Layout title="Class Schedule">
@@ -46,44 +42,53 @@ export default class Mindbodyonline extends Component {
 					<link
 						rel="stylesheet"
 						href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-						integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-						crossorigin="anonymous"
 					/>
 				</Head>
 
 				<div className="card-space">
-					{/* {classSchedule[0].classScheduleId}
-					{classSchedule[0].Location.Name}
-					{classSchedule[0].ClassDescription.Name} */}
-
-					{classSchedule.map((x) => (
-						<li key={x.classScheduleId}>
-							<div className="container">
-								<div className="eachListing row">
-									<div className="col-sm">
-										<h5>{x.Date} Sunday</h5>
-										<p>
-											{x.StartDateTime} - {x.EndDateTime}
-										</p>
-										<p>{x.Location.Name}</p>
-									</div>
-									<div className="col-sm">
-										<h5>{x.ClassDescription.Name}</h5>
-										<p>{x.ClassDescription.Description}</p>
-										{/* <p>Availability: {x.IsAvailable}</p> */}
-									</div>
-									<div className="col-xs verticalAlign vertical">
-										<a href={'https://clients.mindbodyonline.com/LoginLaunch?studioid=590475'}>
-											Book class
-										</a>
+					<img
+						className="imageHead"
+						src="https://scontent.fsin3-1.fna.fbcdn.net/v/t1.0-9/41679727_735312276806906_3214309389242466304_o.jpg?_nc_cat=101&_nc_oc=AQnd91_8ITD43jaU_HMAdEq0DW0ruvnIQ1NsxWtnzcGhq33y8rCT0uKR_zEMDQHinK8&_nc_ht=scontent.fsin3-1.fna&oh=ee2b126cca63973c2256f3a43890c75a&oe=5EB4DA01"
+						alt=""
+					/>
+					<div className="container">
+						{/* {classSchedule[0].classScheduleId}
+						{classSchedule[0].Location.Name}
+						{classSchedule[0].ClassDescription.Name} */}
+						<div className="textCenter">
+							<h3>Classes suitable for you!</h3>
+							<Link href="/PublicClass">
+								<a>Back</a>
+							</Link>
+						</div>
+						{classSchedule.map((x) => (
+							<li key={x.classScheduleId}>
+								<div className="container">
+									<div className="eachListing row">
+										<div className="col-sm">
+											<h5>{x.Date} Sunday</h5>
+											<p>
+												{x.StartDateTime} - {x.EndDateTime}
+											</p>
+											<p>{x.Location.Name}</p>
+										</div>
+										<div className="col-sm">
+											<h5>{x.ClassDescription.Name}</h5>
+											<p>{x.ClassDescription.Description}</p>
+											{/* <p>Availability: {x.IsAvailable}</p> */}
+										</div>
+										<div className="col-xs verticalAlign vertical">
+											<a href={'https://clients.mindbodyonline.com/LoginLaunch?studioid=590475'}>
+												Book class
+											</a>
+										</div>
 									</div>
 								</div>
-							</div>
-						</li>
-					))}
+							</li>
+						))}
 
-					{/* MBO  */}
-					{/* {schedule.Classes.map((x) => (
+						{/* MBO  */}
+						{/* {schedule.Classes.map((x) => (
 						<li key={x.ClassScheduleId}>
 						<div className="container">
 							<div className="eachListing row">
@@ -105,18 +110,30 @@ export default class Mindbodyonline extends Component {
 							</div>
 						</li>
 					))} */}
+					</div>
 				</div>
 
 				<style jsx>
 					{`
+						.imageHead {
+							width: 100%;
+							height: 300px;
+							object-fit: cover;
+							object-position: 0 80%;
+						}
 						.card-space {
-							// margin-top: 50px;
-							padding-top: 5%;
-							padding-bottom: 5%;
-							// text-align: center;
-							// display: inline-block;
+							padding-top: 3%;
 						}
 
+						.container {
+							padding: 15px;
+						}
+
+						.textCenter {
+							text-align: center;
+							// padding: 10px;
+							margin: 10px;
+						}
 						.eachListing {
 							// border: 1px solid blue;
 							margin-bottom: 10px;
@@ -130,12 +147,12 @@ export default class Mindbodyonline extends Component {
 							list-style: none;
 						}
 
-						.verticalAlign {
-							// padding: 2% 0;
-						}
-
 						.vertical {
 							padding: 4% 0;
+						}
+
+						a {
+							color: dark-blue;
 						}
 					`}
 				</style>
@@ -143,12 +160,3 @@ export default class Mindbodyonline extends Component {
 		);
 	}
 }
-
-// {poses.map((pose) => (
-// 	<li key={pose.id}>
-// 		<Link href="/p/[id]" as={`/p/${pose.id}`}>
-// 			<a>{pose.name}</a>
-// 		</Link>
-// 		<p>{pose.category}</p>
-// 	</li>
-// ))

@@ -10,7 +10,10 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user
+    user_comments = @user.comments
+    render json: @user.to_json(include: :comments) 
+    # {user: @user, comments: user_comments}
+    # render json: @user
   end
 
   # POST /users

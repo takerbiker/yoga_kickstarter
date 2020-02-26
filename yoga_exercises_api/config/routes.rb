@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments, only: [:index, :create]
   scope '/api' do 
 
     post 'user_token' => 'user_token#create'

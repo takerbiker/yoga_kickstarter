@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-    has_secure_password
+    has_many :comments
+    # has_secure_password
     # def self.from_token_payload payload
     #     payload['sub']
     #   end
